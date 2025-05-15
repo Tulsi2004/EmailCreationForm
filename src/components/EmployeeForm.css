@@ -1,0 +1,151 @@
+/* General form styling */
+.employee-form {
+  max-width: 1000px; /* Standard size for the form */
+  margin: 20px auto; /* Center the form horizontally */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #f9f9f9;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box; /* Ensures padding is included in the width */
+  display: grid; /* Grid layout */
+  grid-template-columns: 1fr 1fr; /* Two-column layout */
+  gap: 20px; /* Spacing between elements */
+}
+
+/* Title styling */
+.employee-form h1 {
+  grid-column: 1 / -1; /* Span the title across both columns */
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #248b56;
+}
+
+/* Label styling */
+.employee-form label {
+  font-size: 14px;
+  color: #209c89;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column; /* Stack label and input */
+  grid-column: span 1; /* Default to one column */
+}
+
+.employee-form label span.required {
+  color: red;
+  font-weight: bold;
+}
+
+/* Single-line input fields */
+.employee-form input[type="text"],
+.employee-form input[type="email"],
+.employee-form input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Ensures padding doesn't overflow */
+}
+
+/* Full-width input (e.g., Email, Location of Work, Company Email ID) */
+.employee-form .full-width {
+  grid-column: 1 / -1; /* Span across both columns */
+}
+
+/* Two fields in one line (e.g., Franchise Name and Name of Person, Mobile No and WhatsApp No) */
+.employee-form .two-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equally spaced columns */
+  gap: 20px; /* Spacing between the two fields */
+  grid-column: 1 / -1; /* Span across both columns */
+}
+
+/* Fieldset styling */
+.employee-form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  grid-column: 1 / -1; /* Span across both columns */
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns for Position and Report To */
+  gap: 20px; /* Spacing between the two sections */
+}
+
+/* Legend styling */
+.employee-form legend {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #209c89;
+}
+
+/* Radio buttons styling */
+.employee-form fieldset label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #605d5d;
+}
+
+.employee-form label input[type="radio"] {
+  margin-right: 5px;
+}
+
+/* Show "Other" input dynamically */
+.employee-form .other-input {
+  margin-top: 10px;
+  display: block; /* Ensure it's visible when shown dynamically */
+}
+
+/* Error message styling */
+.employee-form .error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+}
+
+/* Submit button styling */
+.employee-form button {
+  grid-column: 1 / -1; /* Span across both columns */
+  align-self: center;
+  justify-self: center;
+  width: 150px; /* Standard button size */
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+}
+
+.employee-form button:hover {
+  background: #0056b3;
+}
+
+/* Styling for the @talentcorner.in span */
+.employee-form span {
+  font-size: 14px;
+  margin-left: 5px;
+  color: #555;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .employee-form {
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+  }
+
+  .employee-form .two-fields {
+    grid-template-columns: 1fr; /* Stack fields vertically */
+  }
+
+  .employee-form button {
+    width: 100%; /* Full-width button for smaller screens */
+  }
+}
